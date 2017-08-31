@@ -32,7 +32,7 @@ public class TestSprite extends Sprite {
 	}
 
 	public void onGUI(){
-		GUI.Box(0, 0, 1, 1, "Test", texture);
+		GUI.Box(0, 0, 1, 1, "Test");
 	}
 	
 	public void setUniforms() {}

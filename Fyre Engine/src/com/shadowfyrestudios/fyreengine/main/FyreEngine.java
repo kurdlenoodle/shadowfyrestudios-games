@@ -31,7 +31,7 @@ public class FyreEngine {
 	 	{
 		 	throw new IllegalStateException("OH SHIT! GLFW fucked up! Aborting...");
 	 	}
-	 
+
 	 	System.out.println("GLFW is now running.");
 	 	
 	 	Display.createDisplay(windowTitle, windowWidth, windowHeight, fullscreen);
@@ -47,6 +47,8 @@ public class FyreEngine {
 		GL.createCapabilities();
 		glClearColor(1, 1, 1, 1);
 		glEnable(GL_TEXTURE_2D);
+	 	glEnable(GL_BLEND);
+	 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		initArea.doneInit();
 		
 		Matrix4f projectionMatrix = new Matrix4f().ortho2D(-winWidth / 2, winWidth / 2, -winHeight / 2, winHeight / 2).scale(64);

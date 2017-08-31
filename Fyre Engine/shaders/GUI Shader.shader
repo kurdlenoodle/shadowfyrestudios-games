@@ -25,9 +25,6 @@ void main()
 {
 
 	vec4 colour = texture2D(engine_texture, uvs);
-	
-	if(colour.a <= 0.5)
-		discard;
 
 	gl_FragColor = colour;
 
